@@ -28,7 +28,7 @@ const routes = [
   { path: "/test", name: "test", component: Test },
   { path: "/posts", name: "PostIndex", component: PostIndex },
   { path: "/posts/new", name: "PostNew", component: PostNew },
-  { path: "/posts/1", name: "PostShow", component: PostShow },
+  { path: "/posts/:id", name: "PostShow", component: PostShow },
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
