@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Test from "../views/Test.vue";
 import PostIndex from "../views/PostIndex.vue";
 import PostNew from "../views/PostNew.vue";
+import PostShow from "../views/PostShow.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
@@ -27,6 +28,7 @@ const routes = [
   { path: "/test", name: "test", component: Test },
   { path: "/posts", name: "PostIndex", component: PostIndex },
   { path: "/posts/new", name: "PostNew", component: PostNew },
+  { path: "/posts/1", name: "PostShow", component: PostShow },
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
