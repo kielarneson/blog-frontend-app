@@ -3,13 +3,17 @@
     <h1>All Posts</h1>
     <div v-for="post in posts" v-bind:key="post.id">
       <h2>{{ post.title }}</h2>
-      <img v-bind:src="post.image" alt="" />
       <p>{{ post.body }}</p>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+p {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+</style>
 
 <script>
 import axios from "axios";
