@@ -3,6 +3,8 @@
     <h1>{{ post.title }}</h1>
     <img v-bind:src="post.image" alt="" />
     <p>{{ post.body }}</p>
+    <button @click="deletePost(post)">Delete</button>
+    |
     <router-link v-bind:to="`/posts/${post.id}/edit`">Edit Post</router-link>
     |
     <a href="/posts">Return to All Posts</a>
@@ -27,6 +29,12 @@ export default {
     showPost: function () {
       axios.get(`/posts/${this.$route.params.id}`).then((response) => {
         this.post = response.data;
+      });
+    },
+    deletePost: function (post) {
+      axios.delete(`/posts/${post.id}`).then((response) => {
+        console.log("Post Successfully Deleted", response);
+        this.$router.push("/posts");
       });
     },
   },

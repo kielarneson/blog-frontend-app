@@ -2,9 +2,11 @@
   <div class="postIndex">
     <h1>All Posts</h1>
     <div class="index" v-for="post in posts" v-bind:key="post.id">
-      <a v-bind:href="`/posts/${post.id}`">
-        <img :src="post.image" alt="" />
-      </a>
+      <h1>{{ post.title }}</h1>
+      <img :src="post.image" alt="" />
+      <div>
+        <a v-bind:href="`/posts/${post.id}`">Show More</a>
+      </div>
     </div>
   </div>
 </template>
