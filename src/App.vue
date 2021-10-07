@@ -20,6 +20,21 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/posts">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/posts/new">New Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
             </li>
           </ul>
@@ -31,23 +46,6 @@
       </div>
     </nav>
 
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
-      |
-      <router-link to="/test">Test</router-link>
-      |
-      <router-link to="/posts">Posts</router-link>
-      |
-      <router-link to="/posts/new">New Post</router-link>
-      |
-      <router-link to="/signup">Signup</router-link>
-      |
-      <router-link to="/login">Login</router-link>
-      |
-      <router-link to="/logout">Logout</router-link>
-    </div>
     <router-view />
   </div>
 </template>

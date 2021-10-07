@@ -14,14 +14,6 @@
         </div>
       </div>
     </div>
-
-    <div class="index" v-for="post in posts" v-bind:key="post.id">
-      <h1>{{ post.title }}</h1>
-      <img :src="post.image" alt="" />
-      <div>
-        <a v-bind:href="`/posts/${post.id}`">Show More</a>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -29,6 +21,13 @@
 .card img {
   object-fit: cover;
   height: 400px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 </style>
 
