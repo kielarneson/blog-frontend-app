@@ -1,7 +1,7 @@
 <template>
   <div class="postIndex">
     <h1>All Posts</h1>
-    <div v-for="post in posts" v-bind:key="post.id">
+    <div class="index" v-for="post in posts" v-bind:key="post.id">
       <a v-bind:href="`/posts/${post.id}`">
         <img :src="post.image" alt="" />
       </a>
@@ -9,12 +9,7 @@
   </div>
 </template>
 
-<style>
-p {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-</style>
+<style></style>
 
 <script>
 import axios from "axios";

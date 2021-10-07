@@ -3,6 +3,8 @@
     <h1>{{ post.title }}</h1>
     <img v-bind:src="post.image" alt="" />
     <p>{{ post.body }}</p>
+    <router-link v-bind:to="`/posts/${post.id}/edit`">Edit Post</router-link>
+    |
     <a href="/posts">Return to All Posts</a>
   </div>
 </template>

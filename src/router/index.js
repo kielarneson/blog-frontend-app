@@ -5,6 +5,7 @@ import Test from "../views/Test.vue";
 import PostIndex from "../views/PostIndex.vue";
 import PostNew from "../views/PostNew.vue";
 import PostShow from "../views/PostShow.vue";
+import PostEdit from "../views/PostEdit.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
@@ -29,6 +30,7 @@ const routes = [
   { path: "/posts", name: "PostIndex", component: PostIndex },
   { path: "/posts/new", name: "PostNew", component: PostNew },
   { path: "/posts/:id", name: "PostShow", component: PostShow },
+  { path: "/posts/:id/edit", name: "PostEdit", component: PostEdit },
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
