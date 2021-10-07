@@ -11,7 +11,7 @@
 
     <dialog id="delete-details">
       <form method="dialog">
-        <h1>Are you sure you want to delete?</h1>
+        <h3>Are you sure you want to delete?</h3>
         <button @click="deletePost(post)">Yes</button>
         <button>Close</button>
       </form>

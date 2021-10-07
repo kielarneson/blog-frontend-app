@@ -1,6 +1,20 @@
 <template>
   <div class="postIndex">
     <h1>All Posts</h1>
+    <div class="row">
+      <div class="col-sm-4" v-for="post in posts" v-bind:key="post.id">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <img :src="post.image" alt="" />
+            <div>
+              <router-link v-bind:to="`/posts/${post.id}`">Show More</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="index" v-for="post in posts" v-bind:key="post.id">
       <h1>{{ post.title }}</h1>
       <img :src="post.image" alt="" />
@@ -11,7 +25,12 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.card img {
+  object-fit: cover;
+  height: 400px;
+}
+</style>
 
 <script>
 import axios from "axios";
