@@ -18,6 +18,8 @@
         <input type="text" v-model="post.image" />
       </div>
       <input type="submit" value="submit" />
+      |
+      <router-link to="/posts">Cancel</router-link>
     </form>
   </div>
 </template>
