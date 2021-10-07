@@ -3,7 +3,7 @@
     <h1>All Posts</h1>
     <div class="row">
       <div class="col-sm-4" v-for="post in posts" v-bind:key="post.id">
-        <div class="card">
+        <div class="card text-center">
           <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
             <img :src="post.image" alt="" />
@@ -21,7 +21,7 @@
 .card img {
   object-fit: cover;
   height: 400px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
