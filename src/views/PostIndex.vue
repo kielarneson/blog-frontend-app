@@ -3,7 +3,10 @@
     <h1>All Posts</h1>
     <div>
       Search:
-      <input type="text" v-model="searchFilter" />
+      <input type="text" v-model="searchFilter" list="post-titles" />
+      <datalist id="post-titles">
+        <option v-for="post in posts" v-bind:key="post.id">{{ post.title }}</option>
+      </datalist>
     </div>
     <div class="row">
       <div class="col-sm-4" v-for="post in filterBy(posts, searchFilter, 'title', 'body')" v-bind:key="post.id">
