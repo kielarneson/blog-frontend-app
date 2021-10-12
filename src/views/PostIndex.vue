@@ -21,13 +21,15 @@
 .card img {
   object-fit: cover;
   height: 400px;
-  margin-bottom: 20px;
+}
+
+img {
+  width: 300px;
 }
 
 h1 {
   text-align: center;
   padding-top: 15px;
-  padding-bottom: 15px;
 }
 </style>
 

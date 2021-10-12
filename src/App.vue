@@ -26,13 +26,13 @@
               <a class="nav-link" href="/posts/new">New Post</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/signup">Signup</a>
+              <a class="nav-link" v-if="!isLoggedIn()" href="/signup">Signup</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
+              <a class="nav-link" v-if="!isLoggedIn()" href="/login">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
+              <a class="nav-link" v-if="isLoggedIn()" href="/logout">Logout</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
@@ -55,3 +55,19 @@
   font-family: Futura, Helvetica, Arial, sans-serif;
 }
 </style>
+
+<script>
+export default {
+  data: function () {
+    return {
+      message: "Welcome to Vue.js!",
+    };
+  },
+  created: function () {},
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt") ? true : false;
+    },
+  },
+};
+</script>
