@@ -45,6 +45,7 @@
         </div>
       </div>
     </nav>
+    <div v-if="flashMessage" class="alert alert-success" @click="flashMessage = ''">{{ flashMessage }}</div>
 
     <router-view />
   </div>
@@ -60,7 +61,7 @@
 export default {
   data: function () {
     return {
-      message: "Welcome to Vue.js!",
+      flashMessage: "",
     };
   },
   created: function () {},
