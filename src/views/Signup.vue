@@ -20,6 +20,21 @@
       <div>
         <label>Password confirmation:</label>
         <input type="password" v-model="newUserParams.password_confirmation" />
+        <small
+          v-if="
+            newUserParams.password_confirmation.length > 0 &&
+            newUserParams.password !== newUserParams.password_confirmation
+          "
+          class="text-warning"
+        >
+          Does not match
+        </small>
+        <small
+          v-if="newUserParams.password.length > 0 && newUserParams.password === newUserParams.password_confirmation"
+          class="text-success"
+        >
+          Match
+        </small>
       </div>
       <input type="submit" value="Submit" />
     </form>
@@ -32,7 +47,12 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      newUserParams: {},
+      newUserParams: {
+        name: "",
+        email: "",
+        password: "",
+        password_confirmation: "",
+      },
       errors: [],
     };
   },
