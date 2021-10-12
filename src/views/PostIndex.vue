@@ -6,7 +6,7 @@
       <input type="text" v-model="searchFilter" />
     </div>
     <div class="row">
-      <div class="col-sm-4" v-for="post in filterBy(posts, searchFilter, 'title', 'description')" v-bind:key="post.id">
+      <div class="col-sm-4" v-for="post in filterBy(posts, searchFilter, 'title', 'body')" v-bind:key="post.id">
         <div class="card text-center">
           <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
