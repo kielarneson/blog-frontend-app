@@ -34,7 +34,7 @@
         <input type="password" v-model="newUserParams.password_confirmation" />
         <small
           v-if="
-            newUserParams.password.length === newUserParams.password_confirmation.length &&
+            newUserParams.password_confirmation.length >= newUserParams.password.length &&
             newUserParams.password !== newUserParams.password_confirmation
           "
           class="text-warning"
