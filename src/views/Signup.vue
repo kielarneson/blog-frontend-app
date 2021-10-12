@@ -12,13 +12,13 @@
           v-if="newUserParams.name.length > 0 && newUserParams.name[0] !== newUserParams.name[0].toUpperCase()"
           class="text-warning"
         >
-          Capitalize first name
+          Capitalize name
         </small>
         <small
           v-if="newUserParams.name.length > 0 && newUserParams.name[0] === newUserParams.name[0].toUpperCase()"
           class="text-success"
         >
-          Valid first name
+          Valid name
         </small>
       </div>
       <div>
@@ -37,7 +37,7 @@
             newUserParams.password_confirmation.length >= newUserParams.password.length &&
             newUserParams.password !== newUserParams.password_confirmation
           "
-          class="text-warning"
+          class="text-danger"
         >
           Does not match
         </small>
