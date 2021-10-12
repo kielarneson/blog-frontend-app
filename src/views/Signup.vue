@@ -8,6 +8,18 @@
       <div>
         <label>Name:</label>
         <input type="text" v-model="newUserParams.name" />
+        <small
+          v-if="newUserParams.name.length > 0 && newUserParams.name[0] !== newUserParams.name[0].toUpperCase()"
+          class="text-warning"
+        >
+          Capitalize first name
+        </small>
+        <small
+          v-if="newUserParams.name.length > 0 && newUserParams.name[0] === newUserParams.name[0].toUpperCase()"
+          class="text-success"
+        >
+          Valid first name
+        </small>
       </div>
       <div>
         <label>Email:</label>
